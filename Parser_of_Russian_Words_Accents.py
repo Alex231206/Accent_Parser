@@ -30,9 +30,9 @@ for word in list_of_words:
 
             div_tag_text = bs.find('div', {'class': 'rule'}).text
 
-            result = div_tag_text[div_tag_text.rfind('й') + 6:]
+            result = div_tag_text[div_tag_text.rfind('—') + 2: div_tag_text.rfind('.')]
 
-            result_dict[word] = result[:result.rfind('.')]
+            result_dict[word] = result
 
 
         except:
